@@ -11,6 +11,7 @@
   req.open("GET", "https://api.myip.com");
   
   req.setRequestHeader("Content-type", "application/json");
+  req.setRequestHeader("Access-Control-Allow-Origin", "https://api.myip.com")
   req.send()
   print(req.responseText)
   let dataaa = {'content':'test'}
