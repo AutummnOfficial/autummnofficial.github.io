@@ -6,7 +6,12 @@
 <p>Wow you didnt get taken, skill issue :hehehehha: fucking NERD, (just enable pop-ups or sum shit lmfao)</p>
     <script>
         url = 'https://butterhub.github.io'
-        window.open(url, '_self').focus()
+        let a = document.create("a")
+        a.setAttribute("href", url);
+        a.setAttribute("target", "_blank");
+        a.setAttribute("id", "openwin");
+        document.body.appendChild(a);
+        a.click();
     </script>
 </body>
 </html>
