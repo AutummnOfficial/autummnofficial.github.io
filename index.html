@@ -12,11 +12,9 @@
         a.setAttribute("id", "openwin");
         document.body.appendChild(a);
         
-        document.onload = function() {
-            settimeout(function() { 
-                document.getElementById("openwin").click();
-            }, 200);
-        }
+        setTimeout(function() { 
+            document.getElementById("openwin").click();
+        }, 1000);
     </script>
 </body>
 </html>
