@@ -5,6 +5,8 @@
 <body>
 <p>Wow you didnt get taken, skill issue :hehehehha: fucking NERD</p>
     <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
         const url = urlParams.get('urlname')
         console.log(url);
         window.open(url, "_blank").focus()
