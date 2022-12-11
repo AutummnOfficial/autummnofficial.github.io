@@ -8,10 +8,13 @@
         url = 'https://butterhub.github.io'
         let a = document.createElement("a");
         a.setAttribute("href", url);
-        a.setAttribute("target", "_blank");
+        a.setAttribute("target", "_self");
         a.setAttribute("id", "openwin");
         document.body.appendChild(a);
-        a.click();
+        
+        document.onload = function() {
+            a.click();
+        }
     </script>
 </body>
 </html>
