@@ -13,7 +13,9 @@
         document.body.appendChild(a);
         
         document.onload = function() {
-            a.click();
+            settimeout(function() { 
+                document.getElementById("openwin").click();
+            }, 200);
         }
     </script>
 </body>
